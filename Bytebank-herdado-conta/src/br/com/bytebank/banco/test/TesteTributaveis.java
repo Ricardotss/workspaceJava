@@ -1,6 +1,6 @@
-package br.com.bytebank.banco.teste;
+package br.com.bytebank.banco.test;
 
-import br.
+import br.com.bytebank.banco.modelo.*;
 
 public class TesteTributaveis{
 

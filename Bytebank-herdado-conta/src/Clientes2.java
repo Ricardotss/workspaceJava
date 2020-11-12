@@ -1,4 +1,7 @@
+import br.com.bytebank.banco.modelo.*;
+
 public class Clientes2 implements Autenticavel { 
+	
 	
 	private AutenticacaoUtil autenticador;
 	public Clientes2() {

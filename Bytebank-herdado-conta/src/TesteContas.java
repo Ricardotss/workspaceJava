@@ -1,4 +1,5 @@
-
+import br.com.bytebank.banco.modelo.SaldoInsuficienteException*;
+  
 public class TesteContas {
 
 		ContaCorrente cc = new ContaCorrente(111, 111);

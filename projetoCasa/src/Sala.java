@@ -1,25 +1,35 @@
+import java.util.Scanner;
+
 public class Sala {
+	private static final boolean Fliperama = false;
 
-	private String sala; 
-	private String ligarFliperama;
-	private String desligar;
-
-	public void LigarTv(String comodo, boolean ligar) {
-	
-	
-	if (comodo == "sala") {
-		 System.out.println("");
+	public void LigarFliperama(String comodo, boolean ligar) {
 		
-		  
-	  }
-	    if (comodo.equals("Digite 'liga' para ligar o fliperama ")) {
-		  System.out.println("Fliperama ligado");
-		  return ;
-	  }
-	  if (Sala == Desligar) {
-		  System.out.println("Fliperama desligado ");
-	  }
+		boolean Fliperama;
 	
-}
-}
 
+		if (comodo.equals("SALA")) {
+
+			System.out.println("Digite 'liga' para ligar o fliperama  ou 'Desliga' para desligar o fliperama");
+
+		}
+
+		
+		Scanner p = new Scanner(System.in);
+		comodo = p.next().toUpperCase();
+		
+		if (comodo.equals("LIGA")) {
+			System.out.println("Fliperama ligado");
+
+		}
+		if (comodo.equals("DESLIGA")) {
+			System.out.println("Fliperama desligado "); 
+			
+
+		}
+		
+		public boolean isFlipeLiga() {
+			return Fliperama;
+
+	}
+}

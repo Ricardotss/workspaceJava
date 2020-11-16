@@ -1,19 +1,25 @@
+import java.util.Scanner;
 
 public class Quarto {
 
 	boolean televisao;
 	
-		public void liga(String comodo, boolean ligar ) {
+		public void ligaTv(String comodo, boolean ligar ) {
+			
+			
+
+				System.out.println("Digite 'liga' para ligar a televisão  ou 'Desliga' para desligar o Televisão");
+				
+				Scanner p = new Scanner(System.in);
+				comodo = p.next().toUpperCase();
+
 		
-		System.out.println("Para ligar a TV , escreva 'Liga' ");
-			
-		
-		if (comodo.equals("liga")) {
-			System.out.println("Fliperama está ligado");
+		if (comodo.equals("LIGA")) {
+			System.out.println("Televisão está ligado");
 			
 			
-		}else if (comodo.equals("desliga")) {
-					System.out.println("Fliperama está desligado");
+		}else if (comodo.equals("DESLIGA")) {
+					System.out.println("Televisão está desligado");
 				}
 		}
 		

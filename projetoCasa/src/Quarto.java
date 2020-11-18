@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
-public class Quarto {
+import projetoCasa.Estrutura;
+
+public class Quarto extends Estrutura {
+	
+	
 
 	boolean televisao;
+	boolean lampada;
 	
 		public void ligaTv(String comodo, boolean ligar ) {
 			
@@ -27,6 +32,8 @@ public class Quarto {
 			return televisao;
 			
 			}
+			
+			
 		
 			
 		}

@@ -1,20 +1,21 @@
 import java.util.Scanner;
 
-public class FINAL {
+import projetoCasa.Estrutura;
+
+public class FINAL extends Estrutura {
 
 	public static void main(String[] args) {
 
 		Casa casa = new Casa();
+		Scanner m = new Scanner(System.in);
 
 			String comodo = "";
 			System.out.println("Para sair digite 'sair' ");
 
-			while (!comodo.equals("SAIR")) && !casa.getSala().isFlipeLiga()
-											|| !casa.getQuarto().isTvLigada()
+			while (!comodo.equals("SAIR") && !casa.getSala().isFlipeLiga()
+										  || !casa.getQuarto().isTvLigada())
 
 				System.out.println("Para qual comodo você quer ir ");
-				Scanner p = new Scanner(System.in);
-				comodo = p.next().toUpperCase();
 				
 				boolean existeComodo = true;
 
@@ -26,8 +27,9 @@ public class FINAL {
 				}
 
 				if (existeComodo == true) {
-					System.out.println("Nao existe")				boolean existeComodo = true;
-;
+					System.out.println("Nao existe"); 
+					
+
 				} else {
 
 					System.out.println("Você está no " + comodo);
@@ -35,19 +37,26 @@ public class FINAL {
 					
 					if (comodo.equals("QUARTO")) {
 
-						casa.getQuarto().ligaTvvalues(comodo, true);
+						boolean lampada() {
+							return ligalampada();
+						
+						} casa.getQuarto().ligaTv(comodo, true);
+						
 
 					}
 
 					if (comodo.equals("SALA")) {
 
 						casa.getSala().LigarFliperama(comodo, true);
+						
+						
 
 					}
 				
-			}
-			System.out.println("--------------------------------------------------------------");
-			System.out.println("-------------------Voce está saindo de casa ------------------");
-			System.out.println("--------------------------------------------------------------");
-	}
+	
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("-------------------Voce está saindo de casa ------------------");
+		System.out.println("--------------------------------------------------------------");
+
+		}
 }

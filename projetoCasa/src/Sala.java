@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
-public class Sala {
+import projetoCasa.Estrutura;
+
+public class Sala extends Estrutura {
+	
+
 	private static final boolean Fliperama = false;
 
 	public void LigarFliperama(String comodo, boolean ligar) {
@@ -25,8 +29,15 @@ public class Sala {
 		if (comodo.equals("DESLIGA")) {
 			System.out.println("Fliperama desligado "); 
 			
-
 		}
+		
+		getLampada().ligalampada(comodo);
+		
+	}
+
+	
+		
+
 		
 		public boolean isFlipeLiga() {
 			return Fliperama;

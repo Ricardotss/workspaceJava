@@ -1,5 +1,5 @@
 public class Conta2 {
-    private double saldo;
+    protected double saldo;
     private int agencia;
     private int numero;
     private static Clientes2 titular; 
@@ -64,6 +64,11 @@ public class Conta2 {
     	
     public static int getTotal() {
     	return Conta2.total;
+    }
+    
+    @Override
+    public String toString() {
+    	return "Numero: " + this.numero + ", Agencia: " + this.agencia;
     }
     	
     

@@ -1,3 +1,4 @@
+package br.com.bytebank.banco.modelo;
 import br.com.bytebank.banco.modelo.*;
 
 public class Clientes2 implements Autenticavel { 

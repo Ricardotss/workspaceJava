@@ -7,7 +7,8 @@ public class CalculadorDeImposto {
 		private double totalImposto;
 		
 		public void registra (CalculadorDeImposto seguro) {
-			double valor = t.getValorImposto();
+			Object t;
+			double valor = ((Object) t).getValorImposto();
 			this.totalImposto += valor;
 		}
 			public double getTotalImposto() {

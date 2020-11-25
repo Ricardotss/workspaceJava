@@ -1,5 +1,9 @@
 package br.com.bytebank.banco.test;
 
+import br.com.bytebank.banco.modelo.Clientes2;
+import br.com.bytebank.banco.modelo.ContaCorrente;
+import br.com.bytebank.banco.modelo.ContaPoupanca;
+
 public class TesteObject {
 
 	public static void main(String[] args) { 
@@ -9,7 +13,7 @@ public class TesteObject {
         System.out.println(false);
        
         Object cc = new ContaCorrente(22, 33);
-        Object ContaPoupanca cp = new ContaPoupanca(33, 22);
+        Object ContaPoupanca br.com.bytebank.banco.test.ContaPoupanca cp = new ContaPoupanca(33, 22);
         Object clientes2 = new Clientes2();
         
         

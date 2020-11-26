@@ -13,12 +13,12 @@ public class TesteObject {
         System.out.println(false);
        
         Object cc = new ContaCorrente(22, 33);
-        Object ContaPoupanca br.com.bytebank.banco.test.ContaPoupanca cp = new ContaPoupanca(33, 22);
         Object clientes2 = new Clientes2();
         
         
         System.out.println(cc);
-        System.out.println(cp);
+        char[] cp = null;
+		System.out.println(cp);
        
       //  println(cp);
 	}
@@ -27,7 +27,7 @@ public class TesteObject {
     static void println(int a) {}
     static void println(boolean valor) {}
     
-    static void println( ) {}
+    static void println( ) ; {}
     
        
 }

@@ -1,18 +1,25 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
+import br.com.bytebank.banco.modelo.Clientes2;
 import br.com.bytebank.banco.modelo.Conta2;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 
-public class Teste {
+public class TesteArrayList {
+
+	private static Object cc;
 
 	public static void main(String[] args) {
 		
-		ArrayList lista = new ArrayList();
-		
-		Conta2 cc = new ContaCorrente(22, 11);
-        lista.add(cc);
+		Collection<Conta2> lista = new LinkedList<Conta2>();
+	
+		//Conta2 cc = new ContaCorrente(22, 11);
+		Clientes2 cliente = new Clientes2();
+        lista.add((Conta2) cc);
 
         Conta2 cc2 = new ContaCorrente(22, 22);
         lista.add(cc2);
@@ -20,7 +27,7 @@ public class Teste {
         System.out.println(lista.size());
         
         Conta2 ref = (Conta2) lista.get(0);
-        System.out.println(ref.getNumero());
+        System.out.println(ref.getNumero()); 
         
         lista.remove(0);
         

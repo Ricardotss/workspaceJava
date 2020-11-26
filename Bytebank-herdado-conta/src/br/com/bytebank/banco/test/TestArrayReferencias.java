@@ -33,7 +33,7 @@ public class TestArrayReferencias {
 //                
 //                System.out.println(referenciaGenerica.getNumero() );
 
-                Conta2 ref = referencias[1];
+                Conta2 ref = (Conta2) referencias[1];
                 System.out.println(cc2.getNumero());
                 System.out.println(ref.getNumero());
         }

@@ -37,13 +37,13 @@ public class FINAL extends Estrutura {
 					
 					if (comodo.equals("QUARTO")) {
 
-						boolean lampada() {
-							return ligalampada();
+						//boolean lampada() {
+						//	return ligalampada();
 						
 						} casa.getQuarto().ligaTv(comodo, true);
 						
 
-					}
+					
 
 					if (comodo.equals("SALA")) {
 

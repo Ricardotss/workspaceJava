@@ -15,7 +15,7 @@ public class TesteOutrosWrappers {
 			Boolean bRef = Boolean.FALSE;
 			System.out.println(bRef.booleanValue());
 			
-			Number refNumero = float.valueOf(29.9f);
+			Number refNumero = float.class(29.9f);
 			
 			List<Number> lista = new ArrayList<>();
 			lista.add(10);

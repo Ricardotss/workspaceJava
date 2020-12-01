@@ -20,11 +20,6 @@ public class TesteWrapperInterger {
 			
 			
 			
-			String s = args[0];
-			
-			
-			int numero = Integer.parseInt(s);
-			System.out.println(numero);
-		}
 
+}
 }

@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-public class Conta2 {
+public class Conta2 implements comparable<Conta2> {
 	protected double saldo;
 	private int agencia;
 	private int numero;

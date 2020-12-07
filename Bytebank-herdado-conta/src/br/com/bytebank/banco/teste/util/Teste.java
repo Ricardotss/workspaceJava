@@ -3,6 +3,7 @@ package br.com.bytebank.banco.teste.util;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 import br.com.bytebank.banco.modelo.Clientes2;
 import br.com.bytebank.banco.modelo.Conta2;
@@ -56,6 +57,9 @@ public class Teste {
 			return nomeC1.compareTo(nomeC2);
 		};
 
+		lista.sort(( comp );
+		lista.forEach( (conta) ) -> System.out.println(conta2 + "," + br.com.bytebank.banco.modelo.Conta2.getTitular().getNome());
+	}
 		
 		for (Conta2 conta2 : lista) {
 			System.out.println(Conta2);
@@ -81,8 +85,28 @@ class TitularContaComparator implements Comparator<Conta2> {
 		String nomeC1 = c1.getTitular().getNome();
 		String nomeC2 = c1.getTitular().getNome();
 		return nomeC1.compareTo(nomeC2);
+		
+	 
+
+     Iterable<Conta2> lista;
+	lista.forEach(new Consumer<Conta2>() {
+
+             public void accept(Conta2 conta2) {
+                 System.out.println(conta2 + ", " + conta2.getTitular().getNome());
+             }
+
+			@Override
+			public void accept(Conta2 ) {
+				// TODO Auto-generated method stub
+				
+			}
+     });
+
+for (Conta2 conta2 : lista) {
+     System.out.println(conta2 + ", " + conta2.getTitular().getNome());
 
 	}
+}
 }
 
 

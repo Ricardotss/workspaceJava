@@ -6,7 +6,7 @@ public class CalcularValorTroco {
 			Scanner scanner = new Scanner(System.in);
 
 			System.out.print("Digite valor Produto: ");
-			Double valorProduto = scanner.nextDouble();
+			Double valorProduto = scannder.nextDouble();
 			
 			System.out.print("Digite valor cliente");
 			Double valorPassadoPeloCliente = scanner.nextDouble();

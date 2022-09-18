@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 import java.util.regex.MatchResult;
 
@@ -10,7 +11,7 @@ public class TESTES {
 		String Nome = Scanner.next();
 		
 		System.out.print("Digite sua idade: ");
-		Double Idade = Scanner.nextDouble();
+		double Idade = Scanner.nextDouble();
 		
 		
 		System.out.println("Seu nome é " + Nome + ", sua idade é " +Idade );

@@ -12,6 +12,7 @@ public class UnidadesPorcentagem {
 		BigDecimal valor =  Scanner.nextBigDecimal();
 		
 		System.out.print("Quantidade do produto: ");
+		
 		BigDecimal quantidade = Scanner.nextBigDecimal();
 		
 		BigDecimal subtotal =  (valor.multiply(quantidade));

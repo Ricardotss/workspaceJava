@@ -15,10 +15,10 @@ public class Projeto_Vendas {
 		Double PorcentagemSemFrete = (ValorSemFrete + ((ValorSemFrete * JurosParcelamento)/100));
 		
 
-			 System.out.println("O que você precisa (1)Celular |(2)Tablet | (3)Notebook | (4)Televisão ");
+			System.out.println("O que você precisa (1)Celular |(2)Tablet | (3)Notebook | (4)Televisão ");
 			Double escolhaAparelho = scanner.nextDouble(); {
 	
-			{ if (escolhaAparelho == 1) {
+			if (escolhaAparelho == 1) {
 			System.out.println(
 					"Escolha o modelo: (1)Samsung S22 Ultra 512GB | (2)Iphone 14 Pro 1TB | (3)Samsung Pocket 2,5GB");
 			Double ModeloAparelho = scanner.nextDouble();
@@ -26,35 +26,37 @@ public class Projeto_Vendas {
 			if (ModeloAparelho == 1) {
 				System.out.println("Certo, Até o momento sua compra é de: R$"+ ValorCelular1);
 				System.out.println("Forma de Entrega: (1)Frete 3 dias úteis R$" + ValorFrete+ " | (2)Buscar na loja Gratis");
-				Double EntregaCelular1 = scanner.nextDouble();
+				Double Entrega = scanner.nextDouble();
 				
-
-			
-			
 				
-				// -----------_-
-				if (EntregaCelular1 == 1) {
+				// -----------
+				if (Entrega == 1) {
 					System.out.println("Seu valor Sub-Total é: R$"+ (ValorComFrete));
 					System.out.println("Você deseja (1)A vista (2)Parcelado em 2X + " + JurosParcelamento+ "% juros");
-					int PagamentoCelular1 = scanner.nextInt();
+					int Pagamento = scanner.nextInt();
 
-					if (PagamentoCelular1 == 1) {
+					if (Pagamento == 1) {
 						System.out.println("Certo, compra aprovada no valor de R$"+ (ValorComFrete));
 						System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
 					}
-					if (PagamentoCelular1 == 2) {
+					if (Pagamento == 2) {
 						System.out.println("Ótimo, compra aprovada em 2X R$"+ new DecimalFormat(".##").format(PorcentagemComFrete/2) + 
 								" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFrete));
 						System.out.println("Aproveite sua compra, não aceitamos devolução");
-						
+					}					
 				
-				if (EntregaCelular1 == 2) {
+					if (Pagamento >= 3) {
+						System.err.println("Digite um námero válido");
+					}
+					
+				}
+				
+				if (Entrega == 2) {
 						System.out.println("Seu valor final é R$"+ ValorSemFrete);
 						System.out.println("Você deseja (1)A vista (2)Parcelado em 2X + " + JurosParcelamento+ "% juros");
 						Double pagamento1 = scanner.nextDouble();
-					
 
-					if (PagamentoCelular1 == 2) {
+					if (pagamento1 == 2) {
 						System.out.println("Ótimo, compra aprovada em 2x R$"+ new DecimalFormat(".##").format(PorcentagemSemFrete/ 2)
 								+ " com valor final de R$" + new DecimalFormat(".##").format(PorcentagemSemFrete));
 						System.out.println("Aproveite sua compra, Não aceitamos devolução");
@@ -62,17 +64,16 @@ public class Projeto_Vendas {
 						}else if (pagamento1 == 1) {
 							System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFrete);
 							System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-			
-							if (pagamento1 >=3 ) {
-								System.err.println("Digite um valor valido");
-							}
-							if (EntregaCelular1 >=3 ) {
-								System.err.println("Digite um valor valido");
-								}
-								
-					
-			} 
 			}
+					if(pagamento1 >=3) {
+						System.err.println("Digite um námero válido");
+					}
+			}
+				
+				if (Entrega >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+				
 			}
 			//****************************************************************************
 			//CELULAR MODELO 2
@@ -107,7 +108,9 @@ public class Projeto_Vendas {
 								" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFrete2));
 						System.out.println("Aproveite sua compra, não aceitamos devolução");
 					}					
-					
+					if (Pagamento >= 3) {
+						System.err.println("Digite um numero válido");
+					}
 				}
 				
 				if (Entrega == 2) {
@@ -123,14 +126,15 @@ public class Projeto_Vendas {
 						}else if (pagamento1 == 1) {
 							System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFrete2);
 							System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-							
-							if (Entrega >=3 ) {
-								System.err.println("Digite um valor valido");
-							if (pagamento1 >=3 ) {
-									System.err.println("Digite um valor valido");
-								}
-		
-				}}}}
+			}
+					if (pagamento1 >= 3) {
+						System.err.println("Digite um numero válido");
+					}
+			}
+				if (Entrega >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+			}
 	//*************************************************************
 		//CELULAR MODELO 3
 			
@@ -147,30 +151,30 @@ public class Projeto_Vendas {
 			if (ModeloAparelho == 3) {
 				System.out.println("Certo, Até o momento sua compra é de: R$"+ ValorCelular3);
 				System.out.println("Forma de Entrega: (1)Frete 3 dias úteis R$" + ValorFrete3 + " | (2)Buscar na loja Gratis");
-				Double Entrega3 = scanner.nextDouble();
+				Double Entrega = scanner.nextDouble();
 				
 				
 				// -----------
-				if (Entrega3 == 1) {
+				if (Entrega == 1) {
 					System.out.println("Seu valor Sub-Total é: R$"+ (ValorComFrete3));
 					System.out.println("Você deseja (1)A vista (2)Parcelado em 2X +" + JurosParcelamento+ "% juros");
-					int Pagamento3 = scanner.nextInt();
-					
-				
-					if (Pagamento3 == 1) {
+					int Pagamento = scanner.nextInt();
+
+					if (Pagamento == 1) {
 						System.out.println("Certo, compra aprovada no valor de R$"+ (ValorComFrete3));
 						System.out.println("Quando a bomba relogio estourar não me procure");
 					}
-					if (Pagamento3 == 2) {
+					if (Pagamento == 2) {
 						System.out.println("Ótimo, compra aprovada em 2X R$"+ new DecimalFormat(".##").format(PorcentagemComFrete3/2) + 
 								" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFrete3));
 						System.out.println("Em pleno 2022, ano da copa do mundo, ano de eleição e você parcelando um pocket ? Mundo está perdido mesmo ");
-						
-						}				
-					
+					}					
+					if (Pagamento >= 3) {
+						System.err.println("Digite um numero válido");
+					}
 				}
 				
-				if (Entrega3 == 2) {
+				if (Entrega == 2) {
 						System.out.println("Seu valor final é R$"+ ValorSemFrete3);
 						System.out.println("Você deseja (1)A vista (2)Parcelado em 2 vezes com 7% juros");
 						Double pagamento1 = scanner.nextDouble();
@@ -184,16 +188,19 @@ public class Projeto_Vendas {
 							System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFrete3);
 							System.out.println("Comprar um Pocket em pleno 2022 irmão ?"
 									+ " Aproveite sua bomba relógio, não aceitamos devolução");
-			
-							if (Entrega3 >=3 ) {
-								System.err.println("Digite um valor valido");	
-								}
-							
-							if (pagamento1 >=3 ) {
-								System.err.println("Digite um valor valido");
-							}
 			}
-			}}
+					if (pagamento1 >= 3) {
+						System.err.println("Digite um numero válido");
+					}
+			}
+				if (Entrega >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+			}
+			if (ModeloAparelho >= 3) {
+				System.err.println("Digite um numero válido");
+			}
+			}
 	//*****************************************************
 			
 			//TABLET MODELO 1
@@ -230,7 +237,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTablet));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTablet >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTablet == 2) {
@@ -246,15 +255,14 @@ public class Projeto_Vendas {
 							}else if (pagamentoTablet == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTablet);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaTablet >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								
-								if (pagamentoTablet >=3 ) {
-									System.err.println("Digite um valor valido");
-								}}
 				}
+						if (pagamentoTablet >= 3) {
+							System.err.println("Digite um numero válido");
+						}
+				}
+					if (EntregaTablet >= 3) {
+						System.err.println("Digite um numero válido");
+					}
 				}
 				
 				
@@ -291,7 +299,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTablet2));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTablet2 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTablet2 == 2) {
@@ -307,14 +317,14 @@ public class Projeto_Vendas {
 							}else if (pagamentoTablet2 == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTablet2);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaTablet2 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoTablet2 >=3 ) {
-									System.err.println("Digite um valor valido");
-								}	}
 				}
+						if (pagamentoTablet2 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
+				}
+					if (EntregaTablet2 >= 3) {
+						System.err.println("Digite um numero válido");
+					}
 				}
 				}	
 				
@@ -348,7 +358,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTablet3));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTablet3 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTablet3 == 2) {
@@ -364,13 +376,18 @@ public class Projeto_Vendas {
 							}else if (pagamentoTablet3 == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTablet3);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaTablet3 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoTablet3 >=3 ) {
-									System.err.println("Digite um valor valido");
-				}}}}}}}
+	}				if (pagamentoTablet3 >= 3) {
+						System.err.println("Digite um numero válido");
+	}
+	}
+					if (EntregaTablet3 >= 3) {
+						System.err.println("Digite um numero válido");
+					}
+	}}
+				if (ModeloTablet >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+				}}
 			
 		//****************************************************
 				// NOTEBOOK MODELO 1
@@ -410,7 +427,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteNotebook));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoNotebook >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaNotebook == 2) {
@@ -426,13 +445,15 @@ public class Projeto_Vendas {
 							}else if (pagamentoNotebook == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteNotebook);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaNotebook >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoNotebook >=3 ) {
-									System.err.println("Digite um valor valido");
-					}}}}
+				}
+					if (pagamentoNotebook >= 3) {
+						System.err.println("Digite um numero válido");
+					}
+				}
+					if (EntregaNotebook >= 3) {
+						System.err.println("Digite um numero válido");
+					}	
+				}
 		//**************************************
 				//NOTEBOOK MODELO 2
 				
@@ -467,7 +488,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteNotebook2));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoNotebook2 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaNotebook2 == 2) {
@@ -483,13 +506,15 @@ public class Projeto_Vendas {
 							}else if (pagamentoNotebook == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteNotebook2);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaNotebook2 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoNotebook >=3 ) {
-									System.err.println("Digite um valor valido");
-					}	}}}
+				}
+					if (pagamentoNotebook >= 3) {
+						System.err.println("Digite um numero válido");
+					}	
+				}
+					if (EntregaNotebook2 >= 3) {
+						System.err.println("Digite um numero válido");
+				}	
+				}
 				
 			//**********************************************
 				//NOTEBOOK MODELO 3
@@ -525,7 +550,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteNotebook3));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoNotebook3 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaNotebook3 == 2) {
@@ -541,13 +568,19 @@ public class Projeto_Vendas {
 							}else if (pagamentoNotebook3 == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteNotebook3);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaNotebook3 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoNotebook3 >=3 ) {
-									System.err.println("Digite um valor valido");
-					}	}}}}
+					}
+						if (pagamentoNotebook3 >= 3) {
+							System.err.println("Digite um numero válido");
+					}	
+					}
+						if (EntregaNotebook3 >= 3) {
+							System.err.println("Digite um numero válido");
+					}	
+				}
+				if (ModeloNotebook >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+				}
 			//****************************************
 				//TELEVISÃO MODELO 1
 				
@@ -583,7 +616,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTelevisao));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTelevisao >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTelevisao == 2) {
@@ -599,13 +634,15 @@ public class Projeto_Vendas {
 							}else if (pagamentoTelevisao == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTelevisao);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaTelevisao >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoTelevisao >=3 ) {
-									System.err.println("Digite um valor valido");
-					}}}}
+				}
+						if (pagamentoTelevisao >= 3) {
+							System.err.println("Digite um numero válido");
+						}	
+					}
+					if (EntregaTelevisao >= 3) {
+						System.err.println("Digite um numero válido");
+					}	
+				}
 		//****************************************
 				//TELEVISÃO MODELO 2
 				
@@ -636,7 +673,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTelevisao2));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTelevisao2 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTelevisao2 == 2) {
@@ -652,13 +691,15 @@ public class Projeto_Vendas {
 							}else if (pagamentoTelevisao2 == 1) {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTelevisao2);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
-								
-								if (EntregaTelevisao2 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoTelevisao2 >=3 ) {
-									System.err.println("Digite um valor valido");
-					}}}}
+				}
+						if (pagamentoTelevisao2 >= 3) {
+							System.err.println("Digite um numero válido");
+						}	
+					}
+					if (EntregaTelevisao2 >= 3) {
+						System.err.println("Digite um numero válido");
+					}	
+				}
 		//****************************************
 				//TELEVISÃO MODELO 3
 				
@@ -689,7 +730,9 @@ public class Projeto_Vendas {
 									" com valor final de " + "R$" + new DecimalFormat(".##").format(PorcentagemComFreteTelevisao3));
 							System.out.println("Aproveite sua compra, não aceitamos devolução");
 						}					
-						
+						if (PagamentoTelevisao3 >= 3) {
+							System.err.println("Digite um numero válido");
+						}
 					}
 					
 					if (EntregaTelevisao3 == 2) {
@@ -706,11 +749,25 @@ public class Projeto_Vendas {
 								System.out.println("Certo, compra aprovada no valor de R$" + ValorSemFreteTelevisao3);
 								System.out.println("Aproveite sua compra, Qualquer duvida não me procure");
 		
-								if (EntregaTelevisao3 >=3 ) {
-									System.err.println("Digite um valor valido");	
-									}
-								if (pagamentoTelevisao3 >=3 ) {
-									System.err.println("Digite um valor valido");
-					}}}}}}}}}}}}}
+								
+								
+	}
+						if (pagamentoTelevisao3 >= 3) {
+							System.err.println("Digite um numero válido");
+						}	
+					}
+					if (EntregaTelevisao3 >= 3) {
+						System.err.println("Digite um numero válido");
+					}	
+				}
+				if (ModeloTelevisao >= 3) {
+					System.err.println("Digite um numero válido");
+				}
+				}}}
+				if (escolhaAparelho >= 5) {
+					System.err.println("Digite um numero válido");
+			}		
+	
+	}}
 
 
